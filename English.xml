@@ -159,5 +159,14 @@
 <entitydescription.afoamdart>Simply put, its a foam dart, for a foam dart gun.</entitydescription.afoamdart>
 <entityname.gfddecimator>GFD Decimator</entityname.gfddecimator>
 <entitydescription.gfddecimator>The first of its kind, the GFD Decimator! The first and best of the GFD revolver series that is sure to ruin someone's day!</entitydescription.gfddecimator>
-<awindup>Wind Up</awindup>                                                                            
+<awindup>Wind Up</awindup> 
+<entityname.aclownbullet>Clown Bullet</entityname.aclownbullet>
+<entitydescription.aclownbullet>A rubber revolver round that goes honk when hitting someone.</entitydescription.aclownbullet>
+<entityname.aclownbulletblueprint>Crafting blueprint: Clown Bullet</entityname.aclownbulletblueprint>
+<entitydescription.aclownbulletblueprint>A crafting blueprint. Read it to permanently unlock the recipe for the Clown Bullet.</entitydescription.aclownbulletblueprint>
+<entityname.aclowndivingsuit>Clown Diving Suit</entityname.aclowndivingsuit>
+<entitydescription.aclowndivingsuit>A rubbery diving suit adorned with clown flavoring. Withstands pressure up to a depth of 5700 meters.</entitydescription.aclowndivingsuit>
+<entityname.apackofballoons>Pack Of Balloons</entityname.apackofballoons>
+<entitydescription.apackofballoons>A pack of easy inflate balloons that can pop.</entitydescription.apackofballoons>
+                                                                                   
 </infotexts>    
