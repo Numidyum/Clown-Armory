@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Talents>
+      <Override>
+
+<Talent identifier="bigtopspeed">
+    <Icon texture="%ModDir%/Talents/TalentsIconsadd.png" sheetindex="4,1" sheetelementsize="128,128" />
+    <Description tag="talentdescription.unlockrecipe">
+      <Replace tag="[itemname]" value="entityname.clownbooster" color="gui.orange" />
+    </Description>
+    <Description tag="talentdescription.clownpowerbenefits" />
+    <Description tag="talentdescription.additionalstattype">
+      <Replace tag="[amount]" value="20" color="gui.green" />
+      <Replace tag="[stattype]" value="stattypenames.walkingspeed" color="gui.orange" />
+    </Description>
+    <AbilityGroupInterval>
+      <Conditions>
+        <AbilityConditionHasAffliction afflictionidentifier="clownpower" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityModifyStat stattype="WalkingSpeed" value="0.2" />
+      </Abilities>
+    </AbilityGroupInterval>
+    <AddedRecipe itemidentifier="clownbooster" />
+</Talent>
+
+<Talent identifier="psychoclown">
+      <Icon texture="Content/UI/TalentsIcons2.png" sheetindex="7,5" sheetelementsize="128,128" />
+      <Description tag="talentdescription.psychoclown">
+        <Replace tag="[afflictionname]" value="afflictionname.clownpower" color="gui.orange" />
+        <Replace tag="[maxattackspeed]" value="150" color="gui.green" />
+      </Description>
+      <Description tag="talentdescription.unlockrecipe">
+        <Replace tag="[itemname]" value="entityname.clownvisor" color="gui.orange" />
+      </Description>
+      <AbilityGroupInterval>
+        <Conditions>
+          <AbilityConditionHasAffliction afflictionidentifier="clownpower" />
+        </Conditions>
+        <Abilities>
+          <CharacterAbilityPsychoClown stattype="MeleeAttackSpeed" maxvalue="1.5" afflictionidentifier="psychosis" />
+        </Abilities>
+      </AbilityGroupInterval>
+      <AddedRecipe itemidentifier="clownvisor" />
+</Talent>
+
+<Talent identifier="chonkyhonks">
+      <Icon texture="Content/UI/TalentsIcons3.png" sheetindex="6,7" sheetelementsize="128,128" />
+      <Description tag="talentdescription.chonkyhonks">
+        <Replace tag="[chance]" value="50" color="gui.green" />
+        <Replace tag="[duration]" value="1" color="gui.green" />
+      </Description>
+      <Description tag="talentdescription.unlockrecipe">
+        <Replace tag="[itemname]" value="entityname.zaphorn" color="gui.orange" />
+      </Description>
+      <AbilityGroupEffect abilityeffecttype="OnUseRangedWeapon">
+        <Conditions>
+          <AbilityConditionItem tags="hornitem" />
+          <AbilityConditionHasAffliction afflictionidentifier="clownpower" />
+          <AbilityConditionServerRandom randomchance="0.5" />
+        </Conditions>
+        <Abilities>
+          <!-- TODO loud sound? -->
+          <CharacterAbilityApplyStatusEffectToNonHumans maxdistance="600">
+            <StatusEffects>
+              <StatusEffect type="OnAbility" target="Character" multiplyafflictionsbymaxvitality="true">
+                <Affliction identifier="stun" strength="1.0" />
+              </StatusEffect>
+            </StatusEffects>
+          </CharacterAbilityApplyStatusEffectToNonHumans>
+        </Abilities>
+      </AbilityGroupEffect>
+      <AddedRecipe itemidentifier="zaphorn" />
+</Talent>
+
+<Talent identifier="waterprankster">
+      <Icon texture="Content/UI/TalentsIcons2.png" sheetindex="5,5" sheetelementsize="128,128" />
+      <Description tag="talentdescription.unlockrecipe">
+        <Replace tag="[itemname]" value="entityname.clowndivingmask,entityname.flooder" color="gui.orange" />
+      </Description>
+      <Description tag="talentdescription.clownpowerbenefits" />
+      <Description tag="talentdescription.additionalstattype">
+        <Replace tag="[amount]" value="50" color="gui.green" />
+        <Replace tag="[stattype]" value="stattypenames.swimmingspeed" color="gui.orange" />
+      </Description>
+      <AbilityGroupInterval>
+        <Conditions>
+          <AbilityConditionHasAffliction afflictionidentifier="clownpower" />
+        </Conditions>
+        <Abilities>
+          <CharacterAbilityModifyStat stattype="SwimmingSpeed" value="0.5" />
+        </Abilities>
+      </AbilityGroupInterval>
+      <AddedRecipe itemidentifier="clowndivingmask" />
+      <AddedRecipe itemidentifier="flooder" />
+</Talent>
+
+      </Override>
+</Talents>

@@ -967,5 +967,170 @@
     </ItemContainer>
     <aitarget sightrange="500" />
     <Upgrade gameversion="0.10.0.0" scale="0.5" />
+  </Item>
+  
+<Item name="" identifier="clownbooster" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem,clothing,clowngear,clowns" description="" impactsoundtag="impact_soft" scale="0.5">
+    <Price baseprice="100" canbesold="false" />
+    <PreferredContainer primary="outpostcrewcabinet" spawnprobability="0" />
+    <PreferredContainer primary="crewcab" spawnprobability="0" />
+    <Deconstruct time="40">
+      <Item identifier="bikehorn" />
+      <Item identifier="bikehorn" />
+      <Item identifier="bikehorn" />
+      <Item identifier="steel" />
+      <Item identifier="rubber" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="60" requiresrecipe="true">
+      <RequiredSkill identifier="weapons" level="20" />
+      <RequiredSkill identifier="mechanical" level="30" />
+      <RequiredItem identifier="clowncostume" />
+      <RequiredItem identifier="flamer" />
+    </Fabricate>
+    <InventoryIcon name="Clown Booster Icon" texture="%ModDir%/Equipment/clownboostericon.png" sourcerect="0,0,64,64" origin="0.5,0.5" />
+    <Sprite name="Clown Booster" texture="%ModDir%/Equipment/clownboostersprite.png" sourcerect="0,0,116,56" depth="0.6" origin="0.5,0.5" />
+    <Body width="180" height="50" density="15" friction="0.8" restitution="0.01" />
+    <Wearable slots="Any,InnerClothes" msg="ItemMsgPickUpSelect">
+      <sprite name="Clown's Booster Costume Torso" texture="%ModDir%/Equipment/clownbooster.png" limb="Torso" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Clown's Booster Costume Right Hand" texture="%ModDir%/Equipment/clownbooster.png" limb="RightHand" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Clown's Booster Costume Left Hand" texture="%ModDir%/Equipment/clownbooster.png" limb="LeftHand" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Clown's Booster Costume Right Lower Arm" texture="%ModDir%/Equipment/clownbooster.png" limb="RightArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Clown's Booster Costume Left Lower Arm" texture="%ModDir%/Equipment/clownbooster.png" limb="LeftArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Clown's Booster Costume Right Upper Arm" texture="%ModDir%/Equipment/clownbooster.png" limb="RightForearm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Clown's Booster Costume Left Upper Arm" texture="%ModDir%/Equipment/clownbooster.png" limb="LeftForearm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Clown's Booster Costume Waist" texture="%ModDir%/Equipment/clownbooster.png" limb="Waist" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Clown's Booster Costume Right Thigh" texture="%ModDir%/Equipment/clownbooster.png" limb="RightThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Clown's Booster Costume Left Thigh" texture="%ModDir%/Equipment/clownbooster.png" limb="LeftThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Clown's Booster Costume Right Leg" texture="%ModDir%/Equipment/clownbooster.png" limb="RightLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Clown's Booster Costume Left Leg" texture="%ModDir%/Equipment/clownbooster.png" limb="LeftLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Clown's Booster Costume Left Shoe" texture="%ModDir%/Equipment/clownbooster.png" limb="LeftFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sound="footstep_clown" />
+      <sprite name="Clown's Booster Costume Right Shoe" texture="%ModDir%/Equipment/clownbooster.png" limb="RightFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sound="footstep_clown" />
+      <damagemodifier afflictiontypes="damage" armorsector="0.0,360.0" damagesound="LimbClown" />
+      <damagemodifier afflictiontypes="damage" armorsector="0.0,360.0" damagesound="LimbClown" />
+      <StatusEffect tags="clown" type="OnWearing" target="Character" duration="0.1" stackable="false" />
+    </Wearable>
+    <ItemContainer capacity="1" maxstacksize="1">
+      <SlotIcon slotindex="0" texture="Content/UI/StatusMonitorUI.png" sourcerect="64,448,64,64" origin="0.5,0.5" />
+      <Containable items="weldingtoolfuel,oxygensource" />
+    </ItemContainer>
+    <CustomInterface canbeselected="false" drawhudwhenequipped="true" allowuioverlap="true">
+      <GuiFrame relativesize="0.15,0.1" anchor="BottomCenter" pivot="BottomCenter" relativeoffset="0,0.1" style="ItemUI" />
+      <Button text="Activate Rocket Boots" connection="signal_out1">
+        <RequiredItems items="weldingtoolfuel,oxygensource" type="Contained" msg="ItemMsgWeldingFuelRequired" />
+        <StatusEffect type="OnUse" target="This,Contained" targets="weldingfueltank" Condition="-36.0" />
+        <StatusEffect type="OnUse" target="This,Contained" targets="incendiumfueltank" Condition="-15.0" />
+        <StatusEffect type="OnUse" duration="3" target="This,Character" SpeedMultiplier="2.0" setvalue="true" disabledeltatime="true">
+          <Conditional InWater="false" />
+          <ParticleEmitter particle="flamethrower" particlespersecond="40" anglemin="90" anglemax="90" distancemin="-95" distancemax="-100" velocitymin="0" velocitymax="50" scalemin="0.1" scalemax="0.2" />
+          <ParticleEmitter particle="flamethrowersmoke" particlespersecond="40" anglemin="90" anglemax="90" distancemin="-95" distancemax="-100" velocitymin="0" velocitymax="25" scalemin="0.1" scalemax="0.2" />
+          <sound file="Content/Items/Weapons/FlameThrowerLoop.ogg" type="OnUse" range="350.0" loop="true" />
+          <RequiredItem items="weldingfueltank,incendiumfueltank" type="Contained" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" duration="3" targettype="This,Limb" targetlimbs="LeftLeg,LeftFoot,RightLeg,RightFoot">
+          <RequiredItem items="weldingfueltank,incendiumfueltank" type="Contained" />
+          <Affliction identifier="burn" amount="1.5" probability="0.5" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" duration="3" target="Character">
+          <Conditional InWater="true" />
+          <ParticleEmitter particle="bubbles" particlespersecond="20" anglemin="90" anglemax="90" distancemin="-90" distancemax="-95" scalemin="0.3" scalemax="0.7" velocitymin="5" velocitymax="100" />
+          <ParticleEmitter particle="fleshsmoke" particlespersecond="10" anglemin="90" anglemax="90" distancemin="-90" distancemax="-95" scalemin="1" scalemax="1.5" velocitymin="5" velocitymax="200" />
+          <Affliction identifier="burn" strength="0.5" probability="0.1" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" targettype="Contained" targets="oxygentank" delay="1.0" stackable="false" Condition="0" setvalue="true">
+          <RequiredItem items="oxygentank" type="Contained" />
+          <sound file="Content/Items/Weapons/ExplosionSmall1.ogg" range="2000" />
+          <sound file="Content/Items/Weapons/ExplosionSmall2.ogg" range="2000" />
+          <sound file="Content/Items/Weapons/ExplosionSmall3.ogg" range="2000" />
+          <Explosion range="150.0" force="3" applyfireeffects="false">
+            <Affliction identifier="burn" strength="25" />
+            <Affliction identifier="stun" strength="5" />
+          </Explosion>
+        </StatusEffect>
+        <StatusEffect type="OnUse" targettype="Contained" targets="oxygenitetank" delay="1.0" stackable="false" Condition="0" setvalue="true">
+          <RequiredItem items="oxygenitetank" type="Contained" />
+          <sound file="Content/Items/Weapons/ExplosionSmall1.ogg" range="2000" />
+          <sound file="Content/Items/Weapons/ExplosionSmall2.ogg" range="2000" />
+          <sound file="Content/Items/Weapons/ExplosionSmall3.ogg" range="2000" />
+          <Explosion range="150.0" force="6" applyfireeffects="false">
+            <Affliction identifier="burn" strength="50" />
+            <Affliction identifier="stun" strength="10" />
+          </Explosion>
+        </StatusEffect>
+      </Button>
+    </CustomInterface>
   </Item>  
+
+<Item name="" identifier="clownvisor" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem,clownmask,clowns" description="" scale="0.5" impactsoundtag="impact_metal_light">&gt;
+  <Price baseprice="140" canbesold="false" /><PreferredContainer primary="outpostcrewcabinet" spawnprobability="0" /><PreferredContainer primary="crewcab" spawnprobability="0" /><Deconstruct time="40"><Item identifier="bikehorn" /><Item identifier="copper" /><Item identifier="plastic" /><Item identifier="plastic" /><Item identifier="fulgurium" /></Deconstruct><Fabricate suitablefabricators="fabricator" requiredtime="60" requiresrecipe="true"><RequiredSkill identifier="weapons" level="20" /><RequiredSkill identifier="mechanical" level="20" /><RequiredItem identifier="clownmask" /><RequiredItem identifier="fpgacircuit" /><RequiredItem identifier="plastic" /><RequiredItem identifier="dementonite" /></Fabricate><Sprite name="Clown Visor" texture="%ModDir%/Equipment/clownvisor.png" depth="0.6" sourcerect="0,0,88,72" origin="0.5,0.5" scale="0.5" /><Body width="40" radius="30" density="15" /><Wearable limbtype="Head" slots="Any,Head" msg="ItemMsgPickUpSelect"><sprite name="Clown Visor Wearable" texture="%ModDir%/Equipment/clownvisor.png" limb="Head" inheritlimbdepth="true" inheritscale="true" ignorelimbscale="true" scale="0.75" sourcerect="0,0,89,71" origin="0.5,0.6" /><StatusEffect tags="clown" type="OnWearing" target="Character" HideFace="true" duration="0.1" stackable="false" /><StatusEffect type="OnWearing" target="Character" stackable="false" setvalue="true"><Affliction identifier="psychosis" strength="1.0" /><sound file="Content/Items/Misc/GuitarClown.ogg" range="100.0" loop="true" volume=".5" /></StatusEffect></Wearable><StatusHUD drawhudwhenequipped="true" overlaycolor="0,0,176,120" range="3000" thermalgoggles="true" showdeadcharacters="false" showtexts="false" /></Item>
+  <Item name="" identifier="zaphorn" category="Misc" tags="smallitem,stunner,mountableweapon,hornitem,clowns" scale="0.5" cargocontaineridentifier="metalcrate" description="HONK! ZAP!">
+    <PreferredContainer primary="crewcab" spawnprobability="0.0" />
+    <Price baseprice="200" sold="false" canbespecial="false" />
+    <Deconstruct time="20">
+      <Item identifier="bikehorn" />
+      <Item identifier="steel" />
+      <Item identifier="plastic" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="40" requiresrecipe="true">
+      <RequiredSkill identifier="weapons" level="20" />
+      <Item identifier="bikehorn" />
+      <Item identifier="stungun" />
+    </Fabricate>
+    <InventoryIcon texture="%ModDir%/Weapons/Icons/zaphornicon.png" sourcerect="0,0,64,64" depth="0.55" origin="0.5,0.5" />
+    <Sprite texture="%ModDir%/Weapons/zaphornsprite.png" sourcerect="0,0,52,20" depth="0.55" />
+    <Body width="50" height="20" density="20" />
+    <Holdable slots="Any,RightHand,LeftHand" aimpos="100,0" handle1="-15,-3" msg="ItemMsgPickUpSelect" />
+    <RangedWeapon reload="2" combatPriority="1" drawhudwhenequipped="true" crosshairscale="0.2">
+      <Crosshair texture="Content/Items/Weapons/Crosshairs.png" sourcerect="0,256,256,256" />
+      <CrosshairPointer texture="Content/Items/Weapons/Crosshairs.png" sourcerect="256,256,256,256" />
+      <Sound file="Content/Items/Weapons/honk.ogg" type="OnUse" range="1000" />
+      <StatusEffect type="OnUse" target="Contained">
+        <Explosion range="100.0" force="2" shockwave="false" smoke="false" flames="false" sparks="false" underwaterbubble="false" camerashake="2.0" />
+        <Sound file="Content/Items/Weapons/TaserShot1.ogg" type="OnUse" range="1000" selectionmode="Random" />
+        <Sound file="Content/Items/Weapons/TaserShot2.ogg" type="OnUse" range="1000" />
+      </StatusEffect>
+      <RequiredItems items="stungunammo" type="Contained" msg="ItemMsgAmmoRequired" />
+    </RangedWeapon>
+    <ItemContainer capacity="1" hideitems="true" maxstacksize="1" containedstateindicatorstyle="bullet">
+      <SlotIcon slotindex="0" texture="Content/UI/StatusMonitorUI.png" sourcerect="256,448,64,64" origin="0.5,0.5" />
+      <Containable items="stungunammo" />
+    </ItemContainer>
+  </Item>
+  
+<Item name="" identifier="flooder" category="Equipment" Tags="smallitem,weapon,gun,mountableweapon" cargocontaineridentifier="metalcrate" Scale="0.5" impactsoundtag="impact_metal_light">
+    <PreferredContainer primary="secarmcab" spawnprobability="0" />
+    <PreferredContainer secondary="armcab,weaponholder" spawnprobability="0" />
+    <Price baseprice="200" sold="false" />
+    <Deconstruct time="10">
+      <Item identifier="bikehorn" />
+      <Item identifier="steel" />
+      <Item identifier="rubber" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="20" requiresrecipe="true">
+      <RequiredSkill identifier="weapons" level="30" />
+      <RequiredSkill identifier="mechanical" level="30" />
+      <RequiredItem identifier="bikehorn" />
+      <RequiredItem identifier="flamer" />
+      <RequiredItem identifier="alienpowercell" />
+    </Fabricate>
+    <InventoryIcon texture="%ModDir%/Weapons/Flooder.png" sourcerect="0,0,156,76" />
+    <Sprite texture="%ModDir%/Weapons/Flooder.png" sourcerect="0,0,156,76" depth="0.55" origin="0.5,0.5" />
+    <Body width="150" height="76" density="25" />
+    <Holdable slots="Any,RightHand+LeftHand" controlpose="true" aimpos="50,0" handle1="-62,-16" handle2="-11,-6" msg="ItemMsgPickUpSelect" />
+    <RangedWeapon barrelpos="35,10" spread="0" unskilledspread="0" drawhudwhenequipped="true" reload="0.01">
+      <Pump canbeselected="false" FlowPercentage="100" MaxFlow="200" MinVoltage="0" PowerConsumption="0" voltage="1" IsActive="False" isOn="False" VulnerableToEMP="False" PickingTime="0" CanBePicked="False" AllowInGameEditing="False">
+        <GuiFrame relativesize="0.0,0.0" minsize="0,0" anchor="BottomLeft" absoluteoffset="-100,-100" style="ItemUI" />
+        <StatusEffect type="OnUse" UIHighlightAction="PowerButton" disabledeltatime="false" />
+      </Pump>
+      <RequiredItem items="alienwatercell" type="Contained" />
+      <ParticleEmitter particle="bubbles" particlespersecond="1" copyentityangle="true" velocitymin="100" velocitymax="200" scalemin="0.5" scalemax="0.6" />
+      <ParticleEmitter particle="watersplash" particlespersecond="3" copyentityangle="true" velocitymin="400" velocitymax="500" scalemin="0.5" scalemax="0.6" />
+      <StatusEffect type="OnUse" target="this">
+        <sound file="Content/Sounds/Water/FlowSmall.ogg" type="OnActive" range="600.0" volume="0.5" loop="true" />
+      </StatusEffect>
+    </RangedWeapon>
+    <ItemContainer capacity="1" maxstacksize="1" hideitems="false" itempos="11,-20" containedspritedepth="0.56" containedstateindicatorstyle="tank" removecontaineditemsondeconstruct="true" SpawnWithId="alienwatercell">
+      <SlotIcon slotindex="0" texture="Content/UI/StatusMonitorUI.png" sourcerect="192,448,64,64" origin="0.5,0.5" />
+      <Containable items="alienwatercell" />
+    </ItemContainer>
+  </Item>
+    
 </Items>

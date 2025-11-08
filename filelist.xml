@@ -3,4 +3,6 @@
   <Item file="%ModDir%/Items.xml" />
   <Afflictions file="%ModDir%/afflictions.xml" />
   <Text file="%ModDir%/English.xml"/>
+  <Talents file="%ModDir%/Talents.xml" />
+  <TalentTrees file="%ModDir%/TalentTrees.xml" />
 </contentpackage>

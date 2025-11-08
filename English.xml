@@ -124,5 +124,16 @@
 <entityname.arak_bananalauncher>The Slippery Slope</entityname.arak_bananalauncher>
   <entitydescription.arak_bananalauncher>
     ‖color:0,0,255,255‖(WORK IN PROGRESS:)‖end‖
-  </entitydescription.arak_bananalauncher>                                     
+  </entitydescription.arak_bananalauncher>
+<entityname.clownbooster>Clown Rocket Shoes</entityname.clownbooster>
+<entitydescription.clownbooster>Makes you go faster, at great risk to yourself, for when you need to quickly escape the scene of a crime. Requires welding fuel. Use with caution.</entitydescription.clownbooster>
+<talenttree.bigtopspeed>Big Top Speed</talenttree.bigtopspeed>
+<talentname.bigtopspeed>Big Top Speed</talentname.bigtopspeed>
+<entityname.clownvisor>Clown-O-Vision</entityname.clownvisor>
+<entitydescription.clownvisor>A strange clown mask with some kind of electrical components inside. Looking at it makes you feel funny, but also sad at the same time.</entitydescription.clownvisor>
+<entityname.zaphorn>Zappy Horn</entityname.zaphorn>
+<entitydescription.zaphorn>This bike horn has a firing mechanism and space enough for a single stun dart. You could possibly surprise, distract, and stun your attacker long enough to get away.</entitydescription.zaphorn>
+<entityname.flooder>Flooder</entityname.flooder>
+<entitydescription.flooder>Equal parts alien technology and Honkmother magic, this "flamer" is more like a "flooder."</entitydescription.flooder>
+                                             
 </infotexts>    
