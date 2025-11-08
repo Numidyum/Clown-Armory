@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Afflictions>
+  
+  <Affliction name="Damage Buff" identifier="arak_factionbuff1" description="increased dealt damage temporarily." type="buff" limbspecific="false" indicatorlimb="Head" showiconthreshold="0" showicontoothersthreshold="2" showinhealthscannerthreshold="2" karmachangeonapplied="0" maxstrength="1" affectmachines="true" iconcolors="255,255,255,255;255,255,255,255;255,255,255,255">
+    <Effect minstrength="00" maxstrength="1" strengthchange="-1">
+      <!-- 
+      <StatusEffect target="Character" targetlimb="Head" >
+        <ParticleEmitter particle="electricshock" particlespersecond="10" scalemin="0.10" scalemax="0.15" colormultiplier="255,255,0,255" velocitymin="0" velocitymax="0" anglemin="0" anglemax="360" copyentityangle="false"/>
+       </StatusEffect>
+       -->
+      <StatValue stattype="AttackMultiplier" minvalue="0.2" maxvalue="0.2" />
+    </Effect>
+    <icon texture="%ModDir%/textures/icondmg.png" sourcerect="0,0,128,128" color="255,255,255,255" origin="0,0" />
+  </Affliction>
+  
+  <Affliction name="Firerate Buff" identifier="arak_factionbuff2" description="increased firerate temporarily." type="buff" limbspecific="false" indicatorlimb="Head" showiconthreshold="0" showicontoothersthreshold="2" showinhealthscannerthreshold="2" karmachangeonapplied="0" maxstrength="1" affectmachines="true" iconcolors="255,255,255,255;255,255,255,255;255,255,255,255">
+    <Effect minstrength="00" maxstrength="1" strengthchange="-1">
+      <!-- 
+      <StatusEffect target="Character" targetlimb="Head" >
+        <ParticleEmitter particle="electricshock" particlespersecond="10" scalemin="0.10" scalemax="0.15" colormultiplier="255,255,0,255" velocitymin="0" velocitymax="0" anglemin="0" anglemax="360" copyentityangle="false"/>
+       </StatusEffect>
+       -->
+      <StatValue stattype="RangedAttackSpeed" minvalue="0.25" maxvalue="0.25" />
+      <StatValue stattype="MeleeAttackSpeed" minvalue="0.20" maxvalue="0.20" />
+    </Effect>
+    <icon texture="%ModDir%/textures/iconrof.png" sourcerect="0,0,128,128" color="255,255,255,255" origin="0,0" />
+  </Affliction>
+  
+</Afflictions>

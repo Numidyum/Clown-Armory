@@ -6,5 +6,27 @@
 <entitydescription.scp_clownbatuniform>A clown outfit made for protecting the Honkmother's servants.</entitydescription.scp_clownbatuniform>
 <entityname.scp_clownbatmask>Honkbat Ballistic Mask</entityname.scp_clownbatmask>
 <entitydescription.scp_clownbatmask>A full-face Ballistic mask for both protecting against lower velocity projectiles whilst preserving your beliefs.</entitydescription.scp_clownbatmask>
-       
+<entityname.arak_surpriselupara>Surprise Lupara</entityname.arak_surpriselupara>
+  <entitydescription.arak_surpriselupara>
+    ‖color:8,155,255,255‖TIER 1 ‖end‖
+    ‖color:255,255,255,255‖A small shotgun attached to a toolbelt. Includes an ergonomic banana grip. ‖end‖
+    ‖color:255,255,177,255‖Ammo: 12-Gauge ‖end‖
+    ‖color:255,177,177,255‖Damage: -15% ‖end‖
+    ‖color:177,177,177,255‖Penetration: +0% ‖end‖
+    ‖color:177,255,255,255‖RPM: 46 ‖end‖
+    ‖color:177,177,255,255‖Accuracy: 4 ‖end‖
+    ‖color:255,177,255,255‖2 Round Burst ‖end‖
+    ‖color:255,177,255,255‖Clown Weapon‖end‖
+    </entitydescription.arak_surpriselupara>
+ <entityname.arak_clownrevolver>Clown Revolver</entityname.arak_clownrevolver>
+  <entitydescription.arak_clownrevolver>
+    ‖color:8,155,255,255‖TIER 1 ‖end‖
+    ‖color:255,255,255,255‖A revolver that converts some of the excess gases into a source of joy. ‖end‖
+    ‖color:255,255,177,255‖Ammo: .38 ‖end‖
+    ‖color:177,177,177,255‖Damage: +0% ‖end‖
+    ‖color:177,177,177,255‖Penetration: +0% ‖end‖
+    ‖color:177,255,255,255‖RPM: 100 ‖end‖
+    ‖color:177,177,255,255‖Accuracy: 1 ‖end‖
+    ‖color:255,177,255,255‖Clown Weapon ‖end‖
+    </entitydescription.arak_clownrevolver>           
 </infotexts>    
