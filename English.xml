@@ -135,5 +135,29 @@
 <entitydescription.zaphorn>This bike horn has a firing mechanism and space enough for a single stun dart. You could possibly surprise, distract, and stun your attacker long enough to get away.</entitydescription.zaphorn>
 <entityname.flooder>Flooder</entityname.flooder>
 <entitydescription.flooder>Equal parts alien technology and Honkmother magic, this "flamer" is more like a "flooder."</entitydescription.flooder>
-                                             
+<entityname.alienwatercell>Alien Water Cell</entityname.alienwatercell>
+<entitydescription.alienwatercell>Some strange alien component that seems to produce endless quantities of water. It's no wonder Europa's an ocean.</entitydescription.alienwatercell>
+<entityname.clownpistol>Suspicious Revolver</entityname.clownpistol>
+<entitydescription.clownpistol>There's something funny about this revolver.</entitydescription.clownpistol>
+<talentname.doyoufeellucky>Do You Feel Lucky?</talentname.doyoufeellucky>
+<talentdescription.doyoufeellucky>Deal [amount]% more damage with the ‖color:gui.orange‖Suspicious Revolver‖end‖.</talentdescription.doyoufeellucky>
+<entityname.clownderbuss>Clownderbuss</entityname.clownderbuss>
+<entitydescription.clownderbuss>HONK but bigger!</entitydescription.clownderbuss>
+<entityname.fryingpan>Frying Pan</entityname.fryingpan>
+<entitydescription.fryingpan>Sure to leave a target battered and dazed.</entitydescription.fryingpan>
+<entityname.ahonkhammer>Honk Hammer</entityname.ahonkhammer>
+<entitydescription.ahonkhammer>The sound could drive a person insane.</entitydescription.ahonkhammer>
+<entityname.amothersmaul>Mother's Maul</entityname.amothersmaul>
+<entitydescription.amothersmaul>A eccentrically designed hammer. Hitting hard but being hard to wield.</entitydescription.amothersmaul>
+<entityname.afuncannon>Fun Cannon</entityname.afuncannon>
+<entitydescription.afuncannon>A strange weapon requiring winding of a music box to reload. The ammunition in the chamber is unpredictable and how it is put inside there is unknown.</entitydescription.afuncannon>
+<entityname.atoyhammerspiked>Spiked Toy Hammer</entityname.atoyhammerspiked>
+<entitydescription.atoyhammerspiked>A faster way to get shot as a clown.</entitydescription.atoyhammerspiked>
+<entityname.ajugglingball>Juggling Ball</entityname.ajugglingball>
+<entitydescription.ajugglingball>A ball used for juggling performances. Wait why is it filled with steel?</entitydescription.ajugglingball>
+<entityname.afoamdart>Foam Dart</entityname.afoamdart>
+<entitydescription.afoamdart>Simply put, its a foam dart, for a foam dart gun.</entitydescription.afoamdart>
+<entityname.gfddecimator>GFD Decimator</entityname.gfddecimator>
+<entitydescription.gfddecimator>The first of its kind, the GFD Decimator! The first and best of the GFD revolver series that is sure to ruin someone's day!</entitydescription.gfddecimator>
+<awindup>Wind Up</awindup>                                                                            
 </infotexts>    

@@ -5,4 +5,5 @@
   <Text file="%ModDir%/English.xml"/>
   <Talents file="%ModDir%/Talents.xml" />
   <TalentTrees file="%ModDir%/TalentTrees.xml" />
+  <RandomEvents file="%ModDir%/Events.xml" />
 </contentpackage>

@@ -3,7 +3,7 @@
       <Override>
 
 <Talent identifier="bigtopspeed">
-    <Icon texture="%ModDir%/Talents/TalentsIconsadd.png" sheetindex="4,1" sheetelementsize="128,128" />
+    <Icon texture="%ModDir%/Textures/TalentsIconsadd.png" sheetindex="4,1" sheetelementsize="128,128" />
     <Description tag="talentdescription.unlockrecipe">
       <Replace tag="[itemname]" value="entityname.clownbooster" color="gui.orange" />
     </Description>
@@ -50,7 +50,7 @@
         <Replace tag="[duration]" value="1" color="gui.green" />
       </Description>
       <Description tag="talentdescription.unlockrecipe">
-        <Replace tag="[itemname]" value="entityname.zaphorn" color="gui.orange" />
+        <Replace tag="[itemname]" value="entityname.zaphorn,entityname.clownderbuss" color="gui.orange" />
       </Description>
       <AbilityGroupEffect abilityeffecttype="OnUseRangedWeapon">
         <Conditions>
@@ -70,6 +70,7 @@
         </Abilities>
       </AbilityGroupEffect>
       <AddedRecipe itemidentifier="zaphorn" />
+      <AddedRecipe itemidentifier="clownderbuss" />
 </Talent>
 
 <Talent identifier="waterprankster">
@@ -93,6 +94,28 @@
       <AddedRecipe itemidentifier="clowndivingmask" />
       <AddedRecipe itemidentifier="flooder" />
 </Talent>
+
+<Talent identifier="doyoufeellucky">
+      <Icon texture="%ModDir%/Textures/TalentsIconsAssistantCC.png" sheetindex="4,0" sheetelementsize="128,128" />
+      <Description tag="talentdescription.clownpowerbenefits" />
+      <Description tag="talentdescription.doyoufeellucky">
+        <Replace tag="[amount]" value="100" color="gui.green" />
+      </Description>
+      <Description tag="talentdescription.unlockrecipe">
+        <Replace tag="[itemname]" value="entityname.clownpistol" color="gui.orange" />
+      </Description>
+      <AbilityGroupEffect abilityeffecttype="OnAttack">
+        <Conditions>
+          <AbilityConditionHasAffliction afflictionidentifier="clownpower" />
+          <AbilityConditionAttackData identifiers="clownpistolround" />
+        </Conditions>
+        <Abilities>
+          <CharacterAbilityModifyAttackData addeddamagemultiplier="1" />
+        </Abilities>
+      </AbilityGroupEffect>
+      <AddedRecipe itemidentifier="clownpistol" />
+</Talent>
+
 
       </Override>
 </Talents>

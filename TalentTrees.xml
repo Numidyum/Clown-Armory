@@ -63,11 +63,12 @@
         <TalentOptions>
           <TalentOption identifier="enrollintoclowncollege" />
         </TalentOptions>
-        <TalentOptions>
+        <TalentOptions requiredtalents="1" maxchosentalents="3">
           <TalentOption identifier="waterprankster" />
           <TalentOption identifier="bigtopspeed" />
+          <TalentOption identifier="doyoufeellucky" />
         </TalentOptions>
-        <TalentOptions>
+        <TalentOptions requiredtalents="1" maxchosentalents="2">
           <TalentOption identifier="psychoclown" />
           <TalentOption identifier="chonkyhonks" />
         </TalentOptions>

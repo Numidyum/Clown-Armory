@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Randomevents>
+  <Override>
+    <EventPrefabs>
+      <!--Override clown quest finale to give fun cannon-->
+      <ScriptedEvent identifier="pathofthebikehorn5">
+        <!-- check for state 6: state 5 for the clownhaven event -->
+        <CheckDataAction identifier="pathofthebikehorn" condition="gte 6">
+          <Failure>
+            <!-- do nothing -->
+          </Failure>
+          <Success>
+            <TagAction criteria="player" tag="player" />
+            <SpawnAction npcsetidentifier="customnpcs1" npcidentifier="jestmaster" targettag="jestmaster" spawnlocation="Outpost" targetmoduletags="clownmodule" />
+            <CheckDataAction identifier="pathofthebikehorn" condition="eq 6">
+              <Failure>
+                <!-- do nothing -->
+              </Failure>
+              <Success>
+                <TriggerAction target1tag="player" target2tag="jestmaster" applytotarget1="triggerer_player" waitforinteraction="true" />
+                <NPCFollowAction npctag="jestmaster" targettag="triggerer_player" follow="true" />
+                <ConversationAction targettag="triggerer_player" text="EventText.pathofthebikehorn5.c1.lc" eventsprite="Jestmaster">
+                  <!--Changed the text here to acknowledge the fun cannon-->
+                  <Option text="EventText.pathofthebikehorn5.o1">
+                    <ReputationAction targettype="Faction" identifier="clowns" increase="5" />
+                    <ReputationAction targettype="Faction" identifier="huskcult" increase="-2" />
+                    <ConversationAction targettag="triggerer_player" text="EventText.pathofthebikehorn5.o1.c1">
+                      <Option text="EventText.pathofthebikehorn5.o1.o1">
+                        <ConversationAction targettag="triggerer_player" text="EventText.pathofthebikehorn5.o1.o1.c1">
+                          <Option text="EventText.pathofthebikehorn5.o1.o1.o1">
+                            <ConversationAction targettag="triggerer_player" text="EventText.pathofthebikehorn5.o1.o1.o1.c1">
+                              <Option text="EventText.pathofthebikehorn5.o1.o1.o1.o1">
+                                <ConversationAction targettag="triggerer_player" text="EventText.pathofthebikehorn5.o1.o1.o1.o1.c1" endconversation="true" />
+                                <SetDataAction identifier="pathofthebikehorn" value="7" />
+                              </Option>
+                            </ConversationAction>
+                          </Option>
+                        </ConversationAction>
+                      </Option>
+                    </ConversationAction>
+                  </Option>
+                </ConversationAction>
+                <SpawnAction itemidentifier="afuncannon" targetinventory="triggerer_player" />
+                <!--Spawn fun cannon-->
+              </Success>
+            </CheckDataAction>
+            <Label name="moreadvicepls" />
+            <NPCFollowAction npctag="jestmaster" targettag="triggerer_player" follow="false" />
+            <TriggerAction target1tag="player" target2tag="jestmaster" applytotarget1="triggerer_player" waitforinteraction="true" />
+            <NPCFollowAction npctag="jestmaster" targettag="triggerer_player" follow="true" />
+            <ConversationAction targettag="triggerer_player" text="EventText.pathofthebikehorn5.c1.c1" eventsprite="Jestmaster">
+              <Option text="EventText.pathofthebikehorn5.c1.o1">
+                <ConversationAction targettag="triggerer_player" text="EventText.pathofthebikehorn5.c1.o1.c1">
+                  <Option text="EventText.pathofthebikehorn5.c1.o1.o1" endconversation="true">
+                    <Goto name="moreadvicepls" />
+                  </Option>
+                </ConversationAction>
+              </Option>
+            </ConversationAction>
+          </Success>
+        </CheckDataAction>
+      </ScriptedEvent>
+    </EventPrefabs>
+  </Override>
+</Randomevents>

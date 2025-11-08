@@ -77,5 +77,12 @@
     </Effect>
     <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="640,640,128,128" color="106,106,106,255" origin="0,0" />
   </Affliction>
-  
+
+<Affliction name="Skip and Dash" identifier="askipanddash" description="Honk and Run" type="haste" isbuff="true" limbspecific="false" maxstrength="600">
+    <Effect minstrength="0" maxstrength="100" strengthchange="-30" minspeedmultiplier="1.0" maxspeedmultiplier="1.35">
+      <StatValue stattype="SwimmingSpeed" minvalue="0" maxvalue="0.3" />
+    </Effect>
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="128,896,128,128" color="10,102,156,255" origin="0,0" />
+  </Affliction>
+
 </Afflictions>
