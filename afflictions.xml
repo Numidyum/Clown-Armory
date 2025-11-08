@@ -39,5 +39,17 @@
     </Effect>
     <icon texture="Content/UI/CommandUIAtlas.png" sourcerect="768,768,128,128" color="255,1,1,255" origin="0,0" />
   </Affliction>
+
+  <Affliction name="Accuracy Buff" identifier="arak_factionbuff3" description="increased accuracy temporarily." type="buff" limbspecific="false" indicatorlimb="Head" showiconthreshold="0" showicontoothersthreshold="2" showinhealthscannerthreshold="2" karmachangeonapplied="0" maxstrength="1" affectmachines="true" iconcolors="255,255,255,255;255,255,255,255;255,255,255,255">
+    <Effect minstrength="00" maxstrength="1" strengthchange="-1">
+      <!-- 
+      <StatusEffect target="Character" targetlimb="Head" >
+        <ParticleEmitter particle="electricshock" particlespersecond="10" scalemin="0.10" scalemax="0.15" colormultiplier="255,255,0,255" velocitymin="0" velocitymax="0" anglemin="0" anglemax="360" copyentityangle="false"/>
+       </StatusEffect>
+       -->
+      <StatValue stattype="RangedSpreadReduction" minvalue="0.40" maxvalue="0.40" />
+    </Effect>
+    <icon texture="%ModDir%/textures/iconacc.png" sourcerect="0,0,128,128" color="255,255,255,255" origin="0,0" />
+  </Affliction>
   
 </Afflictions>

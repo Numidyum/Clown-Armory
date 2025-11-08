@@ -95,20 +95,20 @@
     <Sprite name="clownbatinv" texture="%ModDir%/Equipment/clowncombatdress.png" sourcerect="668,92,117,73" depth="0.6" origin="0.5,0.5" />
     <Body width="180" height="50" density="30" friction="0.8" restitution="0.01" />
     <Wearable slots="Any,InnerClothes" msg="ItemMsgPickUpSelect">
-      <sprite name="Torso" texture="clowncombatdress.png" limb="Torso" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sourcerect="0,0,786,256" origin="0.5,0.5" />
-      <sprite name="Right Hand" texture="clowncombatdress.png" limb="RightHand" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sourcerect="0,0,786,256" origin="0.5,0.5" />
-      <sprite name="Left Hand" texture="clowncombatdress.png" limb="LeftHand" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sourcerect="0,0,786,256" origin="0.5,0.5" />
-      <sprite name="Right Lower Arm" texture="clowncombatdress.png" limb="RightForearm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sourcerect="0,0,786,256" origin="0.5,0.5" />
-      <sprite name="Left Lower Arm" texture="clowncombatdress.png" limb="LeftForearm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sourcerect="0,0,786,256" origin="0.5,0.5" />
-      <sprite name="Right Upper Arm" texture="clowncombatdress.png" limb="RightArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sourcerect="0,0,786,256" origin="0.5,0.5" />
-      <sprite name="Left Upper Arm" texture="clowncombatdress.png" limb="LeftArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sourcerect="0,0,786,256" origin="0.5,0.5" />
-      <sprite name="Waist" texture="clowncombatdress.png" limb="Waist" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sourcerect="0,0,786,256" origin="0.5,0.5" />
-      <sprite name="Right Thigh" texture="clowncombatdress.png" limb="RightThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sourcerect="0,0,786,256" origin="0.5,0.5" />
-      <sprite name="Left Thigh" texture="clowncombatdress.png" limb="LeftThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sourcerect="0,0,786,256" origin="0.5,0.5" />
-      <sprite name="Right Leg" texture="clowncombatdress.png" limb="RightLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sourcerect="0,0,786,256" origin="0.5,0.5" />
-      <sprite name="Left Leg" texture="clowncombatdress.png" limb="LeftLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sourcerect="0,0,786,256" origin="0.5,0.5" />
-      <sprite name="Right Shoe" texture="clowncombatdress.png" limb="RightFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sourcerect="0,0,786,256" origin="0.5,0.5" sound="footstep_clown" />
-      <sprite name="Left Shoe" texture="clowncombatdress.png" limb="LeftFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sourcerect="0,0,786,256" origin="0.5,0.5" sound="footstep_clown" />
+      <sprite name="Torso" texture="%ModDir%/Equipment/clowncombatdress.png" limb="Torso" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sourcerect="0,0,786,256" origin="0.5,0.5" />
+      <sprite name="Right Hand" texture="%ModDir%/Equipment/clowncombatdress.png" limb="RightHand" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sourcerect="0,0,786,256" origin="0.5,0.5" />
+      <sprite name="Left Hand" texture="%ModDir%/Equipment/clowncombatdress.png" limb="LeftHand" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sourcerect="0,0,786,256" origin="0.5,0.5" />
+      <sprite name="Right Lower Arm" texture="%ModDir%/Equipment/clowncombatdress.png" limb="RightForearm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sourcerect="0,0,786,256" origin="0.5,0.5" />
+      <sprite name="Left Lower Arm" texture="%ModDir%/Equipment/clowncombatdress.png" limb="LeftForearm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sourcerect="0,0,786,256" origin="0.5,0.5" />
+      <sprite name="Right Upper Arm" texture="%ModDir%/Equipment/clowncombatdress.png" limb="RightArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sourcerect="0,0,786,256" origin="0.5,0.5" />
+      <sprite name="Left Upper Arm" texture="%ModDir%/Equipment/clowncombatdress.png" limb="LeftArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sourcerect="0,0,786,256" origin="0.5,0.5" />
+      <sprite name="Waist" texture="%ModDir%/Equipment/clowncombatdress.png" limb="Waist" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sourcerect="0,0,786,256" origin="0.5,0.5" />
+      <sprite name="Right Thigh" texture="%ModDir%/Equipment/clowncombatdress.png" limb="RightThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sourcerect="0,0,786,256" origin="0.5,0.5" />
+      <sprite name="Left Thigh" texture="%ModDir%/Equipment/clowncombatdress.png" limb="LeftThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sourcerect="0,0,786,256" origin="0.5,0.5" />
+      <sprite name="Right Leg" texture="%ModDir%/Equipment/clowncombatdress.png" limb="RightLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sourcerect="0,0,786,256" origin="0.5,0.5" />
+      <sprite name="Left Leg" texture="%ModDir%/Equipment/clowncombatdress.png" limb="LeftLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sourcerect="0,0,786,256" origin="0.5,0.5" />
+      <sprite name="Right Shoe" texture="%ModDir%/Equipment/clowncombatdress.png" limb="RightFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sourcerect="0,0,786,256" origin="0.5,0.5" sound="footstep_clown" />
+      <sprite name="Left Shoe" texture="%ModDir%/Equipment/clowncombatdress.png" limb="LeftFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sourcerect="0,0,786,256" origin="0.5,0.5" sound="footstep_clown" />
       <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="lacerations,bitewounds" damagemultiplier="0.8" />
       <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="gunshotwound" damagemultiplier="0.75" />
       <damagemodifier afflictiontypes="damage" armorsector="0.0,360.0" damagesound="LimbClown" />
@@ -608,4 +608,60 @@
       </StatusEffect>
     </Projectile>
   </Item>  
+
+<Item name="" identifier="arak_clownshotgun" category="Weapon" cargocontaineridentifier="metalcrate" subcategory="Tier 2" tags="mediumitem,provocativetohumanai,weapon,gun,gunsmith,mountableweapon,tier2wpn,clownweapon" description="" Scale="0.5" impactsoundtag="impact_metal_light">
+    <PreferredContainer primary="secarmcab" secondary="armcab,weaponholder,arak_largecaseweapon" />
+    <Price baseprice="310" minleveldifficulty="15">
+      <Price storeidentifier="merchantclown" minavailable="2" maxavailable="3">
+        <Reputation faction="clowns" min="25" />
+      </Price>
+    </Price>
+    <Deconstruct time="10">
+      <Item identifier="arak_tier2components" amount="1" />
+      <Item identifier="steel" amount="2" />
+      <Item identifier="tin" amount="1" />
+    </Deconstruct>
+    <InventoryIcon texture="%ModDir%/Weapons/icons/clownshotgun.png" sourcerect="0,0,64,64" depth="0.55" origin="0.5,0.5" />
+    <Sprite texture="%ModDir%/Weapons/clownshotgun.png" sourcerect="0,0,200,56" depth="0.55" origin="0.5,0.25" />
+    <Body width="180" height="30" density="25" />
+    <Holdable slots="Any,RightHand+LeftHand" controlpose="true" holdpos="40,-10" aimpos="55,5" handle1="-25,-16" handle2="26,0" holdangle="-40" msg="ItemMsgPickUpSelect" />
+    <RangedWeapon barrelpos="80,5" spread="0.1" unskilledspread="3" combatPriority="80" reload="1.25" drawhudwhenequipped="true" crosshairscale="0.2">
+      <Crosshair texture="Content/Items/Weapons/Crosshairs.png" sourcerect="0,256,256,256" />
+      <CrosshairPointer texture="Content/Items/Weapons/Crosshairs.png" sourcerect="256,256,256,256" />
+      <ParticleEmitter particle="muzzleflash" particleamount="1" velocitymin="0" velocitymax="0" />
+      <ParticleEmitter particle="swirlysmoke" scalemax="0.7" scalemin="0.8" particleamount="1" velocitymin="0" velocitymax="0" colormultiplier="255,255,255,188" lifetimemultiplier="0.5" />
+      <ParticleEmitter particle="spark" anglemin="25" anglemax="-25" particleamount="4" velocitymin="130" velocitymax="650" scalemin="0.5" scalemax="1.2" colormultiplier="255,155,155,255" />
+      <Sound file="Content/Items/Weapons/ShotgunShot1.ogg" type="OnUse" range="3000" selectionmode="All" />
+      <Sound type="OnUse" file="Content/Items/Weapons/ToyHammerHit4.ogg" range="3000" frequencymultiplier="1.2" />
+      <StatusEffect type="OnUse" target="This">
+        <Explosion range="150.0" force="2.5" shockwave="false" smoke="false" flash="true" sparks="false" flames="false" underwaterbubble="false" camerashake="6.0" />
+      </StatusEffect>
+      <StatusEffect type="OnUse" delay="1.0" target="this">
+        <Sound file="Content/Items/Weapons/ShotgunLoad1.ogg" type="OnUse" range="500" selectionmode="Random" />
+        <Sound file="Content/Items/Weapons/ShotgunLoad2.ogg" type="OnUse" range="500" />
+        <Sound file="Content/Items/Weapons/ShotgunLoad3.ogg" type="OnUse" range="500" />
+      </StatusEffect>
+      <RequiredItems items="shotgunammo" type="Contained" msg="ItemMsgAmmoRequired" />
+      <RequiredSkill identifier="weapons" level="40" />
+      <StatusEffect type="OnSecondaryUse" target="Character" disabledeltatime="true" interval="0.5" conditionalcomparison="And">
+        <Conditional HasStatusTag="equals clowncostumeworntag" />
+        <Conditional HasStatusTag="equals clownmaskworntag" />
+        <Affliction identifier="arak_factionbuff2" strength="1" />
+      </StatusEffect>
+    </RangedWeapon>
+    <ItemContainer capacity="1" maxstacksize="6" hideitems="false" containedstateindicatorslot="0" containedstateindicatorstyle="bullet" containedspritedepth="0.56">
+      <Containable items="shotgunammo" hide="true" />
+      <SlotIcon slotindex="0" texture="%ModDir%/Weapons/icons/ammo12.png" sourcerect="0,0,64,64" origin="0.5,0.5" />
+      <SlotIcon slotindex="1" texture="Content/UI/StatusMonitorUI.png" sourcerect="320,448,64,64" origin="0.5,0.5" />
+      <SubContainer capacity="1" maxstacksize="1">
+        <Containable items="flashlight" hide="false" itempos="26,-3" setactive="true" />
+      </SubContainer>
+    </ItemContainer>
+    <aitarget sightrange="3000" soundrange="5000" fadeouttime="5" />
+    <Quality>
+      <QualityStat stattype="FirepowerMultiplier" value="0.05" />
+    </Quality>
+    <SkillRequirementHint identifier="weapons" level="40" />
+  </Item>
+
 </Items>
