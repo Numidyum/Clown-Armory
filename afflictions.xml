@@ -52,4 +52,30 @@
     <icon texture="%ModDir%/textures/iconacc.png" sourcerect="0,0,128,128" color="255,255,255,255" origin="0,0" />
   </Affliction>
   
+  <Affliction name="Mother's Vengeance" identifier="mothersVengeance" description="The subject's skin is rapidly peeling off in flakes like a serious burn." type="poison" causeofdeathdescription="The Mother took her vengeance." selfcauseofdeathdescription="You have died from your skin being burned off." limbspecific="false" indicatorlimb="Torso" showiconthreshold="15" showinhealthscannerthreshold="5" treatmentthreshold="30" karmachangeonapplied="-100" maxstrength="100" affectmachines="false" healcostmultiplier="0" basehealcost="500">
+    <Effect minstrength="0" maxstrength="25" strengthchange="-0.5" minscreendistort="0.0" maxscreendistort="0.4" minscreenblur="0.0" maxscreenblur="0.4" minfacetint="255,100,0,0" maxfacetint="255,100,0,20"></Effect>
+    <Effect minstrength="25" maxstrength="50" strengthchange="-1" minscreendistort="0.0" maxscreendistort="0.4" minscreenblur="0.0" maxscreenblur="0.4" minfacetint="255,100,0,0" maxfacetint="255,100,0,20">
+      <StatusEffect target="Character">
+        <Affliction identifier="acidburn" amount="0.2" />
+      </StatusEffect>
+    </Effect>
+    <Effect minstrength="50" maxstrength="75" strengthchange="-3" minscreendistort="0.0" maxscreendistort="0.8" minscreenblur="0.0" maxscreenblur="0.8" minfacetint="255,100,0,40" maxfacetint="255,100,0,60" minbodytint="255,100,0,0" maxbodytint="255,100,0,40" minspeedmultiplier="0.9" maxspeedmultiplier="0.7" tag="poisoned">
+      <StatusEffect target="Character">
+        <Affliction identifier="acidburn" amount="0.4" />
+      </StatusEffect>
+      <StatusEffect target="Character" interval="1" disabledeltatime="true">
+        <ReduceAffliction identifier="huskinfection" amount="8" />
+      </StatusEffect>
+    </Effect>
+    <Effect minstrength="75" maxstrength="100" strengthchange="-4" minscreendistort="0.8" maxscreendistort="1.0" minscreenblur="0.8" maxscreenblur="1.0" minfacetint="255,100,0,60" maxfacetint="255,100,0,100" minbodytint="255,100,0,40" maxbodytint="255,100,0,80" minspeedmultiplier="0.7" maxspeedmultiplier="0.7" tag="poisoned">
+      <StatusEffect target="Character">
+        <Affliction identifier="acidburn" amount="0.6" />
+      </StatusEffect>
+      <StatusEffect target="Character" interval="1" disabledeltatime="true">
+        <ReduceAffliction identifier="huskinfection" amount="20" />
+      </StatusEffect>
+    </Effect>
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="640,640,128,128" color="106,106,106,255" origin="0,0" />
+  </Affliction>
+  
 </Afflictions>

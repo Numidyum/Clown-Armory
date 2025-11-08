@@ -664,4 +664,265 @@
     <SkillRequirementHint identifier="weapons" level="40" />
   </Item>
 
+  <Item name="Clown Body Armor" identifier="arak_clownbodyarmor" subcategory="Children of the Honkmother" category="Equipment" tags="mediumitem,clothing,clowns" scale="0.4" description="Four kilograms of rubberbands and kevlar wrapped around a blanket. It works." cargocontaineridentifier="metalcrate" impactsoundtag="impact_soft">
+    <Price baseprice="200" canbespecial="false">
+      <Price storeidentifier="merchantclown" minavailable="4" maxavailable="6" sold="true">
+        <Reputation faction="clowns" min="25" />
+      </Price>
+    </Price>
+    <Deconstruct time="10">
+      <Item identifier="organicfiber" />
+      <Item identifier="rubber" amount="2" />
+    </Deconstruct>
+    <InventoryIcon texture="%ModDir%/Equipment/clownarmor.png" sourcerect="0,0,120,160" origin="0.5,0.5" />
+    <Sprite name="Clown Armor Icon" texture="%ModDir%/Equipment/clownarmor.png" sourcerect="0,0,120,160" depth="0.6" origin="0.5,0.5" />
+    <Body width="85" height="90" density="25" />
+    <Wearable slots="Any,OuterClothes" msg="ItemMsgPickUpSelect">
+      <damagemodifier afflictiontypes="burn" armorsector="0.0,360.0" damagemultiplier="0.9" />
+      <damagemodifier afflictiontypes="stun" armorsector="0.0,360.0" damagemultiplier="0.75" />
+      <damagemodifier afflictionidentifiers="explosiondamage" armorsector="0.0,360.0" damagemultiplier="0.7" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="blunttrauma,lacerations,gunshotwound,bitewounds" armorsector="0.0,360.0" damagemultiplier="0.3" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictiontypes="bleeding" armorsector="0.0,360.0" damagemultiplier="0.15" damagesound="LimbArmor" deflectprojectiles="true" />
+      <sprite name="Clown Armor" texture="%ModDir%/Equipment/clownarmor.png" limb="Torso" hidelimb="false" inheritscale="true" scale="0.7" inheritorigin="false" origin="0.45,0.6" inheritsourcerect="false" sourcerect="0,0,120,160" />
+    </Wearable>
+    <ItemContainer capacity="2" maxstacksize="8">
+      <Containable items="smallitem" />
+    </ItemContainer>
+  </Item>
+
+  <Item name="" identifier="arak_bananalauncher" category="Weapon" subcategory="Children of the Honkmother" cargocontaineridentifier="metalcrate" description="A tool that fires a seemingly unending amount of bananas from its drum magazine. Requires oxygen tanks." allowasextracargo="true" tags="mediumitem,provocativetohumanai,plasmacutter,weapon,gun,gunsmith,mountableweapon,uniquetag,uniqueweapontag,tier2wpn" Scale="0.5" impactsoundtag="impact_metal_light">
+    <PreferredContainer primary="secarmcab" secondary="armcab,weaponholder" />
+    <Price baseprice="330" canbespecial="false" sold="false">
+      <Price storeidentifier="merchantclown" minavailable="0" maxavailable="2" sold="true">
+        <Reputation faction="clowns" min="50" />
+      </Price>
+    </Price>
+    <Deconstruct time="35">
+      <Item identifier="arak_tier2components" amount="1" />
+      <Item identifier="iron" amount="4" />
+      <Item identifier="bananapeel" amount="8" />
+    </Deconstruct>
+    <InventoryIcon texture="%ModDir%/Weapons/icons/slippery.png" sourcerect="0,0,64,64" origin="0.5,0.5" />
+    <Sprite texture="%ModDir%/Weapons/slippery.png" sourcerect="0,0,160,80" depth="0.55" origin="0.5,0.5" />
+    <Body width="220" height="50" density="25" />
+    <Holdable slots="Any,RightHand+LeftHand" controlpose="true" holdpos="45,-20" aimpos="57,-5" handle1="-35,-10" handle2="26,10" holdangle="-30">
+      <StatusEffect type="OnActive" target="Character" SpeedMultiplier="0.9" setvalue="true" />
+    </Holdable>
+    <RangedWeapon barrelpos="29,11" spread="5" unskilledspread="5" launchimpulse="11.0" combatPriority="70" drawhudwhenequipped="true" crosshairscale="0.2" reload="0.1" suitableprojectiles="bananapeelprojectile">
+      <Crosshair texture="Content/Items/Weapons/Crosshairs.png" sourcerect="0,256,256,256" />
+      <CrosshairPointer texture="Content/Items/Weapons/Crosshairs.png" sourcerect="256,256,256,256" />
+      <Sound file="Content/Items/Weapons/GrenadeLauncherShot1.ogg" range="800" type="OnUse" selectionmode="All" />
+      <Sound file="Content/Items/Weapons/honk.ogg" range="800" type="OnUse" selectionmode="All" />
+      <ParticleEmitter particle="explosionsmoke" particleamount="2" velocitymin="0" velocitymax="0" />
+      <StatusEffect type="OnUse" target="This">
+        <SpawnItem identifier="bananapeelprojectile" spawnposition="ThisInventory" count="1" />
+        <Explosion range="150.0" force="1" shockwave="false" smoke="false" flames="false" flash="true" sparks="false" underwaterbubble="false" applyfireeffects="false" camerashake="3.0" />
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="This" reload="5.0" setvalue="true" delay="0.3" />
+      <StatusEffect type="OnUse" target="This" reload="0.1" setvalue="true" delay="5.0" />
+      <RequiredItems items="bananapeelprojectile" type="Contained" />
+      <RequiredItems items="oxygensource" type="Contained" msg="ItemMsgOxygenTankRequired" />
+      <StatusEffect type="OnUse" targettype="Contained" targets="oxygensource" Condition="-10.0" disabledeltatime="true" />
+    </RangedWeapon>
+    <ItemContainer capacity="0" maxstacksize="0" hideitems="true" containedstateindicatorstyle="tank" containedstateindicatorslot="0">
+      <Containable items="none" />
+      <SlotIcon slotindex="0" texture="Content/UI/StatusMonitorUI.png" sourcerect="64,448,64,64" origin="0.5,0.5" />
+      <SubContainer capacity="1" maxstacksize="1">
+        <Containable items="oxygensource"></Containable>
+      </SubContainer>
+    </ItemContainer>
+    <ItemContainer capacity="1" maxstacksize="1" hideitems="true" spawnwithid="bananapeelprojectile" removecontaineditemsondeconstruct="true">
+      <Containable items="bananapeelprojectile" />
+    </ItemContainer>
+    <aitarget sightrange="1000" soundrange="300" fadeouttime="3" />
+    <SkillRequirementHint identifier="weapons" level="10" />
+  </Item>
+
+<Item name="Mother's Vengenace" subcategory="CUI" identifier="divingknifeclownunique_CUW" description="A weapon worthy only of the Mother's most faithful. Burns nonbelievers." category="Weapon" Tags="smallitem,weapon,mountableweapon,sharptool" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light" allowasextracargo="true" RequireAimToUse="True">
+    <PreferredContainer primary="secarmcab" secondary="armcab" />
+    <PreferredContainer secondary="wrecksecarmcab,abandonedsecarmcab,piratesecarmcab" spawnprobability="0.05" />
+    <Price baseprice="770" sold="false" canbespecial="false" />
+    <Deconstruct time="10">
+      <Item identifier="steel" />
+      <Item identifier="cyanide" />
+    </Deconstruct>
+    <InventoryIcon texture="%ModDir%/Weapons/clownKnife.png" sourcerect="0,0,64,64" origin="0.5,0.5" />
+    <Sprite texture="%ModDir%/Weapons/clownKnife.png" sourcerect="64,0,63,16" depth="0.55" origin="0.5,0.5" />
+    <Body width="65" height="15" density="25" />
+    <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="50,0" handle1="-10,0" holdangle="30" reload="0.75" range="50" combatPriority="30" msg="ItemMsgPickUpSelect">
+      <Attack targetimpulse="2" severlimbsprobability="0.1" itemdamage="3" structuredamage="2" structuresoundtype="StructureSlash">
+        <Affliction identifier="lacerations" strength="7" />
+        <Affliction identifier="bleeding" strength="7" />
+        <Affliction identifier="stun" strength="0.2" />
+        <!--Affliction identifier="mothersVengeance" strength="8" /-->
+        <StatusEffect type="OnUse" target="UseTarget">
+          <Conditional HasStatusTag="neq clown" />
+          <Affliction identifier="mothersVengeance" strength="8" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="UseTarget">
+          <Conditional entitytype="eq Character" />
+          <Sound file="Content/Sounds/Damage/LimbSlash1.ogg" selectionmode="random" range="500" />
+          <Sound file="Content/Sounds/Damage/LimbSlash2.ogg" range="500" />
+          <Sound file="Content/Sounds/Damage/LimbSlash3.ogg" range="500" />
+          <Sound file="Content/Sounds/Damage/LimbSlash4.ogg" range="500" />
+          <Sound file="Content/Sounds/Damage/LimbSlash5.ogg" range="500" />
+          <Sound file="Content/Sounds/Damage/LimbSlash6.ogg" range="500" />
+        </StatusEffect>
+      </Attack>
+    </MeleeWeapon>
+    <aitarget sightrange="500" soundrange="250" fadeouttime="1" />
+    <Quality>
+      <QualityStat stattype="StrikingPowerMultiplier" value="0.1" />
+    </Quality>
+    <Upgrade gameversion="0.10.0.0" scale="0.5" />
+  </Item>
+
+<Item name="Clown A.S.S. Rifle" subcategory="CUI" identifier="uniqueclownassaultrifle_CUW" description="A very interesting version of the Separatist distributed Assault Rifle modified by clowns to be easier to use and hurt a little bit more. HONK! HONK!! HONK!!! HONK!!!!" category="Weapon" cargocontaineridentifier="metalcrate" allowasextracargo="true" tags="mediumitem,weapon,gun,gunsmith,mountableweapon,provocativetohumanai,clown" Scale="0.5" impactsoundtag="impact_metal_light">
+    <PreferredContainer primary="secarmcab" secondary="armcab,weaponholder" />
+    <PreferredContainer secondary="wrecksecarmcab,abandonedsecarmcab,piratesecarmcab" amount="1" spawnprobability="0.03" />
+    <Price baseprice="660" canbespecial="false" sold="false" minleveldifficulty="50">
+      <Price storeidentifier="merchantclown" minavailable="0" maxavailable="2" sold="true">
+        <Reputation faction="clowns" min="75" />
+      </Price>
+    </Price>
+    <Deconstruct time="35">
+      <Item identifier="physicorium" amount="2" />
+      <Item identifier="titaniumaluminiumalloy" amount="2" />
+      <Item identifier="rubber" />
+    </Deconstruct>
+    <InventoryIcon texture="%ModDir%/Weapons/clownAss.png" sourcerect="0,0,233,62" origin="0.5,0.5" />
+    <Sprite texture="%ModDir%/Weapons/clownAss.png" sourcerect="0,0,233,62" depth="0.55" origin="0.5,0.5" />
+    <Body width="220" height="50" density="25" />
+    <Holdable slots="RightHand+LeftHand" controlpose="true" holdpos="45,-20" aimpos="57,-5" handle1="-35,-10" handle2="26,10" holdangle="-30">
+      <StatusEffect type="OnActive" target="Character" SpeedMultiplier="0.9" setvalue="true" />
+    </Holdable>
+    <Wearable slots="Bag" msg="ItemMsgEquipSelect" canbeselected="false" canbepicked="true" pickkey="Select">
+      <sprite name="Assault Rifle Worn" texture="%ModDir%/Weapons/clownAss.png" canbehiddenbyotherwearables="false" rotation="90" depth="0.6" sourcerect="0,0,233,62" limb="Torso" depthlimb="LeftArm" scale="0.5" origin="0.5,0.8" />
+    </Wearable>
+    <RangedWeapon reload="0.35" holdtrigger="true" barrelpos="100,20" spread="6" unskilledspread="10" combatPriority="80" drawhudwhenequipped="true" crosshairscale="0.2" damagemultiplier="1.2">
+      <Crosshair texture="Content/Items/Weapons/Crosshairs.png" sourcerect="0,256,256,256" />
+      <CrosshairPointer texture="Content/Items/Weapons/Crosshairs.png" sourcerect="256,256,256,256" />
+      <ParticleEmitter particle="whitegoosplash" particleamount="1" velocitymin="0" velocitymax="0" scalemultiplier="1.0,1.0" colormultiplier="255,200,200,200" />
+      <Sound file="Content/Items/Weapons/honk.ogg" type="OnUse" range="1000" />
+      <StatusEffect type="OnUse" target="This">
+        <ParticleEmitter particle="fruitchunks" particleamount="1" anglemin="90" anglemax="150" velocitymin="50" velocitymax="250" CopyEntityAngle="true" />
+        <Explosion range="150.0" force="2" shockwave="false" smoke="false" flames="false" sparks="false" underwaterbubble="false" camerashake="12.0" />
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="Contained">
+        <Use />
+      </StatusEffect>
+      <RequiredItems items="assaultriflemagazine" type="Contained" msg="ItemMsgAmmoRequired" />
+      <RequiredSkill identifier="weapons" level="20" />
+    </RangedWeapon>
+    <ItemContainer capacity="1" maxstacksize="1" hideitems="false" containedstateindicatorslot="0" containedstateindicatorstyle="bullet" containedspritedepth="0.56">
+      <Containable items="assaultrifleammo" itempos="4,-12" />
+      <SlotIcon slotindex="0" texture="Content/UI/StatusMonitorUI.png" sourcerect="256,448,64,64" origin="0.5,0.5" />
+      <SlotIcon slotindex="1" texture="Content/UI/StatusMonitorUI.png" sourcerect="320,448,64,64" origin="0.5,0.5" />
+      <SubContainer capacity="1" maxstacksize="1">
+        <Containable items="flashlight" hide="false" itempos="24,4" setactive="true" />
+      </SubContainer>
+    </ItemContainer>
+    <aitarget sightrange="2000" soundrange="4000" fadeouttime="5" />
+    <Quality>
+      <QualityStat stattype="FirepowerMultiplier" value="0.1" />
+    </Quality>
+    <SkillRequirementHint identifier="weapons" level="20" />
+  </Item>
+
+<Item name="Waterlogged Ancient Outfit" subcategory="CUI" identifier="ruinsuitbody_CUW" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem,clothing" description="A very old waterlogged outfit from an alien ruin that you can hardly fit into. May require further processing to make into something more usable. (All damage modifiers are probability multipliers.)" impactsoundtag="impact_soft" scale="0.5">
+    <Price baseprice="4000" canbespecial="false" sold="false">
+      <Price storeidentifier="merchanthusk" minavailable="0" maxavailable="1" sold="true">
+        <Reputation faction="huskcult" min="75" />
+      </Price>
+    </Price>
+    <PreferredContainer primary="ruinstorage" amount="1" spawnprobability="0.01" />
+    <PreferredContainer primary="crewcab" />
+    <InventoryIcon name="Clown Costume Icon" texture="%ModDir%/Equipment/ancientwaterlogged.png" sourcerect="512,0,110,110" origin="0.5,0.5" />
+    <Sprite texture="Content/Items/Jobgear/MiscJobGear.png" sourcerect="383,359,117,65" depth="0.6" origin="0.5,0.5" />
+    <Body width="180" height="50" density="15" friction="0.8" restitution="0.01" />
+    <Deconstruct time="40">
+      <Item identifier="physicorium" amount="2" />
+    </Deconstruct>
+    <Wearable slots="Any,InnerClothes" msg="ItemMsgPickUpSelect">
+      <sprite name="Clown's Costume Torso" texture="%ModDir%/Equipment/ancientwaterlogged.png" limb="Torso" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Clown's Costume Right Hand" texture="%ModDir%/Equipment/ancientwaterlogged.png" limb="RightHand" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Clown's Costume Left Hand" texture="%ModDir%/Equipment/ancientwaterlogged.png" limb="LeftHand" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Clown's Costume Right Lower Arm" texture="%ModDir%/Equipment/ancientwaterlogged.png" limb="RightArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Clown's Costume Left Lower Arm" texture="%ModDir%/Equipment/ancientwaterlogged.png" limb="LeftArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Clown's Costume Right Upper Arm" texture="%ModDir%/Equipment/ancientwaterlogged.png" limb="RightForearm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Clown's Costume Left Upper Arm" texture="%ModDir%/Equipment/ancientwaterlogged.png" limb="LeftForearm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Clown's Costume Waist" texture="%ModDir%/Equipment/ancientwaterlogged.png" limb="Waist" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Clown's Costume Right Thigh" texture="%ModDir%/Equipment/ancientwaterlogged.png" limb="RightThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Clown's Costume Left Thigh" texture="%ModDir%/Equipment/ancientwaterlogged.png" limb="LeftThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Clown's Costume Right Leg" texture="%ModDir%/Equipment/ancientwaterlogged.png" limb="RightLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Clown's Costume Left Leg" texture="%ModDir%/Equipment/ancientwaterlogged.png" limb="LeftLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Clown's Costume Left Shoe" texture="%ModDir%/Equipment/ancientwaterlogged.png" limb="LeftFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sound="footstep1" />
+      <sprite name="Clown's Costume Right Shoe" texture="%ModDir%/Equipment/ancientwaterlogged.png" limb="RightFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sound="footstep2" />
+      <!-- HENK -->
+      <StatValue stattype="WalkingSpeed" value="-0.35" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="huskinfection,morbusinepoisoning,sufforinpoisoning,cyanidepoisoning" probabilitymultiplier="0.50" damagesound="LimbArmor" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="damage" probabilitymultiplier="0.75" damagesound="LimbArmor" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="bleeding" probabilitymultiplier="0.50" damagesound="LimbArmor" />
+    </Wearable>
+  </Item>  
+
+  <Item name="Patriarch's Vision" subcategory="CUI" identifier="clownmaskunique2_CUW" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem,clownmask,clowns" description="It's not about the marks," scale="0.5">
+    <Price baseprice="100" canbespecial="false" sold="false">
+      <Price storeidentifier="merchantclown" minavailable="0" maxavailable="1" sold="true">
+        <Reputation faction="clowns" min="90" />
+      </Price>
+    </Price>
+    <PreferredContainer primary="wreckstoragecab" spawnprobability="0.03" />
+    <PreferredContainer primary="crewcab" />
+    <Sprite name="Clown Mask" texture="%ModDir%/Equipment/clown_rare2.png" depth="0.6" sourcerect="423,185,89,71" origin="0.5,0.5" scale="0.5" />
+    <Body width="40" radius="30" density="15" />
+    <InventoryIcon texture="%ModDir%/Equipment/clown_rare2.png" sourcerect="469,0,61,64" />
+    <Deconstruct time="10">
+      <Item identifier="bikehorn" />
+    </Deconstruct>
+    <Wearable limbtype="Head" slots="Any,Head" msg="ItemMsgPickUpSelect">
+      <sprite name="Clown Mask Wearable" texture="%ModDir%/Equipment/clown_rare2.png" limb="Head" inheritlimbdepth="true" inheritscale="true" ignorelimbscale="true" scale="0.75" sourcerect="423,185,89,71" origin="0.5,0.6" />
+      <StatusEffect tags="clown" type="OnWearing" target="Character" HideFace="true" duration="0.1" stackable="false" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="explosiondamage" damagemultiplier="0.6" damagesound="" deflectprojectiles="true" />
+    </Wearable>
+  </Item>
+
+<Item name="Patriarch's Message" subcategory="CUI" identifier="clownsuitunique2_CUW" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem,clothing,clowngear,clowns" description="It's about sending a message." impactsoundtag="impact_soft" scale="0.5">
+    <PreferredContainer primary="wreckstoragecab" spawnprobability="0.03" />
+    <PreferredContainer primary="crewcab" />
+    <InventoryIcon name="Clown Costume Icon" texture="%ModDir%/Equipment/clown_rare2.png" sourcerect="405,1,64,64" origin="0.5,0.5" />
+    <Sprite name="Clown Costume" texture="%ModDir%/Equipment/clown_rare2.png" sourcerect="408,81,116,65" depth="0.6" origin="0.5,0.5" />
+    <Body width="180" height="50" density="15" friction="0.8" restitution="0.01" />
+    <Deconstruct time="40">
+      <Item identifier="bikehorn" />
+      <Item identifier="bikehorn" />
+      <Item identifier="bikehorn" />
+    </Deconstruct>
+    <Price baseprice="500" canbespecial="false" sold="false">
+      <Price storeidentifier="merchantclown" minavailable="0" maxavailable="1" sold="true">
+        <Reputation faction="clowns" min="90" />
+      </Price>
+    </Price>
+    <Wearable slots="Any,InnerClothes" msg="ItemMsgPickUpSelect">
+      <sprite name="Legendary Clown's Costume Torso" texture="%ModDir%/Equipment/clown_rare2.png" limb="Torso" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Legendary Clown's Costume Right Hand" texture="%ModDir%/Equipment/clown_rare2.png" limb="RightHand" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Legendary Clown's Costume Left Hand" texture="%ModDir%/Equipment/clown_rare2.png" limb="LeftHand" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Legendary Clown's Costume Right Lower Arm" texture="%ModDir%/Equipment/clown_rare2.png" limb="RightArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Legendary Clown's Costume Left Lower Arm" texture="%ModDir%/Equipment/clown_rare2.png" limb="LeftArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Legendary Clown's Costume Right Upper Arm" texture="%ModDir%/Equipment/clown_rare2.png" limb="RightForearm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Legendary Clown's Costume Left Upper Arm" texture="%ModDir%/Equipment/clown_rare2.png" limb="LeftForearm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Legendary Clown's Costume Waist" texture="%ModDir%/Equipment/clown_rare2.png" limb="Waist" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Legendary Clown's Costume Right Thigh" texture="%ModDir%/Equipment/clown_rare2.png" limb="RightThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Legendary Clown's Costume Left Thigh" texture="%ModDir%/Equipment/clown_rare2.png" limb="LeftThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Legendary Clown's Costume Right Leg" texture="%ModDir%/Equipment/clown_rare2.png" limb="RightLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Legendary Clown's Costume Left Leg" texture="%ModDir%/Equipment/clown_rare2.png" limb="LeftLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Legendary Clown's Costume Left Shoe" texture="%ModDir%/Equipment/clown_rare2.png" limb="LeftFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Legendary Clown's Costume Right Shoe" texture="%ModDir%/Equipment/clown_rare2.png" limb="RightFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <!-- HöNK -->
+      <damagemodifier afflictiontypes="damage" armorsector="0.0,360.0" damagesound="LimbClown" />
+      <damagemodifier afflictiontypes="damage" armorsector="0.0,360.0" damagesound="LimbClown" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="explosiondamage" damagemultiplier="0.6" damagesound="" deflectprojectiles="true" />
+    </Wearable>
+  </Item>
+
 </Items>
