@@ -12,7 +12,7 @@
     </Effect>
     <icon texture="%ModDir%/textures/icondmg.png" sourcerect="0,0,128,128" color="255,255,255,255" origin="0,0" />
   </Affliction>
-  
+
   <Affliction name="Firerate Buff" identifier="arak_factionbuff2" description="increased firerate temporarily." type="buff" limbspecific="false" indicatorlimb="Head" showiconthreshold="0" showicontoothersthreshold="2" showinhealthscannerthreshold="2" karmachangeonapplied="0" maxstrength="1" affectmachines="true" iconcolors="255,255,255,255;255,255,255,255;255,255,255,255">
     <Effect minstrength="00" maxstrength="1" strengthchange="-1">
       <!-- 
@@ -24,6 +24,20 @@
       <StatValue stattype="MeleeAttackSpeed" minvalue="0.20" maxvalue="0.20" />
     </Effect>
     <icon texture="%ModDir%/textures/iconrof.png" sourcerect="0,0,128,128" color="255,255,255,255" origin="0,0" />
+  </Affliction>
+  
+  <Affliction identifier="arak_disguisedasskinwalker" type="disguiseasskinwalker" isbuff="true" limbspecific="false" indicatorlimb="Head" showiconthreshold="1000" showicontoothersthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="1">
+    <Effect minstrength="0" maxstrength="1" strengthchange="-1" tag="skinwalkerinfected" />
+    <icon texture="Content/UI/CommandUIAtlas.png" sourcerect="896,768,128,128" color="10,193,114,255" origin="0,0" />
+  </Affliction>
+  <Affliction identifier="arak_sacrificialsubject1" type="buff" isbuff="true" limbspecific="false" indicatorlimb="Head" showiconthreshold="0" showicontoothersthreshold="100" showinhealthscannerthreshold="100" maxstrength="7">
+    <Effect minstrength="0" maxstrength="1" strengthchange="-1" />
+    <Effect minstrength="1" maxstrength="7" strengthchange="-1">
+      <StatusEffect target="Character" targetlimb="Torso">
+        <ParticleEmitter particle="explosionsmoke" particlespersecond="2" anglemin="-360" anglemax="360" colormultiplier="255,64,0,222" scalemin="0.6" scalemax="0.7" velocitymin="0" velocitymax="0" copyentityangle="false" lifetimemultiplier="1" />
+      </StatusEffect>
+    </Effect>
+    <icon texture="Content/UI/CommandUIAtlas.png" sourcerect="768,768,128,128" color="255,1,1,255" origin="0,0" />
   </Affliction>
   
 </Afflictions>
