@@ -18,7 +18,7 @@
     ‖color:255,177,255,255‖2 Round Burst ‖end‖
     ‖color:255,177,255,255‖Clown Weapon‖end‖
     </entitydescription.arak_surpriselupara>
- <entityname.arak_clownrevolver>Clown Revolver</entityname.arak_clownrevolver>
+<entityname.arak_clownrevolver>Clown Revolver</entityname.arak_clownrevolver>
   <entitydescription.arak_clownrevolver>
     ‖color:8,155,255,255‖TIER 1 ‖end‖
     ‖color:255,255,255,255‖A revolver that converts some of the excess gases into a source of joy. ‖end‖
@@ -28,5 +28,16 @@
     ‖color:177,255,255,255‖RPM: 100 ‖end‖
     ‖color:177,177,255,255‖Accuracy: 1 ‖end‖
     ‖color:255,177,255,255‖Clown Weapon ‖end‖
-    </entitydescription.arak_clownrevolver>           
+    </entitydescription.arak_clownrevolver>
+<entityname.arak_clownshotgun>Honker Pump-Action</entityname.arak_clownshotgun>
+  <entitydescription.arak_clownshotgun>
+    ‖color:8,188,64,255‖TIER 2 ‖end‖
+    ‖color:255,255,255,255‖After the Kogavostok pranking incident, the Coalition no longer allows honking at any officials, especially if the device is loaded with buckshot. ‖end‖
+    ‖color:255,255,177,255‖Ammo: 12-Gauge ‖end‖
+    ‖color:177,177,177,255‖Damage: +0% ‖end‖
+    ‖color:177,177,177,255‖Penetration: +0% ‖end‖
+    ‖color:177,255,255,255‖RPM: 48 ‖end‖
+    ‖color:177,177,255,255‖Accuracy: 1 ‖end‖
+    ‖color:255,177,255,255‖Clown Weapon ‖end‖
+    </entitydescription.arak_clownshotgun>               
 </infotexts>    

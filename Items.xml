@@ -250,4 +250,66 @@
     <SkillRequirementHint identifier="weapons" level="35" />
   </Item>
 
+  <Item name="40mm Jest Grenade" identifier="arak_40mmjestgrenade" category="Weapon" subcategory="Ammunition" maxstacksize="24" maxstacksizecharacterinventory="6" interactthroughwalls="true" cargocontaineridentifier="metalcrate" tags="smallitem,grenade,handheldammo" Scale="0.5" impactsoundtag="impact_metal_light">
+    <PreferredContainer secondary="wreckarmcab,abandonedarmcab" />
+    <PreferredContainer primary="secarmcab" secondary="armcab" />
+    <Price baseprice="100" canbespecial="true" sold="false">
+      <Price storeidentifier="merchantclown" minavailable="1" maxavailable="4" sold="true">
+        <Reputation faction="clowns" min="40" />
+      </Price>
+    </Price>
+    <Deconstruct time="5">
+      <Item identifier="iron" />
+      <Item identifier="phosphorus" />
+      <Item identifier="dementonite" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="ammunitionfabricator" requiredtime="10">
+      <RequiredSkill identifier="weapons" level="30" />
+      <RequiredItem identifier="iron" />
+      <RequiredItem identifier="phosphorus" />
+      <RequiredItem identifier="dementonite" />
+    </Fabricate>
+    <InventoryIcon texture="%ModDir%/Weapons/icons/40mmjestgrenade.png" sourcerect="0,0,64,64" origin="0.5,0.5" />
+    <Sprite texture="%ModDir%/Weapons/40mmjestgrenade.png" sourcerect="0,0,40,20" depth="0.55" origin="0.5,0.5" />
+    <Body width="60" height="8" density="30" />
+    <Pickable slots="Any" msg="ItemMsgPickUpSelect" />
+    <Projectile characterusable="false" launchimpulse="15.0" sticktocharacters="false">
+      <sound file="Content/Items/Weapons/StunGrenade40mmShot1.ogg" type="OnImpact" range="2000" selectionmode="All" />
+      <sound file="Content\Items\Jobgear\Clown\ITEM_bananaSlip2.ogg" type="OnImpact" range="2000" />
+      <!--Grenade launcher ammo explodes on impact-->
+      <StatusEffect type="OnImpact" target="This" Condition="-100.0" disabledeltatime="true">
+        <Explosion range="800" force="64" flames="false">
+          <Affliction identifier="explosiondamage" strength="10" />
+          <Affliction identifier="stun" strength="7" />
+          <Affliction identifier="psychosis" strength="40" />
+        </Explosion>
+        <Remove />
+      </StatusEffect>
+    </Projectile>
+  </Item>
+<Item name="Autohonker" identifier="arak_autohonker" category="Misc" tags="smallitem,hornitem,clowns" scale="0.5" cargocontaineridentifier="metalcrate" description="When akimbo bikehorns are not enough.">
+    <PreferredContainer primary="crewcab" spawnprobability="0.001" notcampaign="true" />
+    <PreferredContainer secondary="wreckcrewcab,abandonedcrewcab" spawnprobability="0.05" />
+    <Price baseprice="150" canbespecial="false">
+      <Price storeidentifier="merchantoutpost" sold="false" />
+      <Price storeidentifier="merchantcity" sold="false" />
+      <Price storeidentifier="merchantresearch" sold="false" />
+      <Price storeidentifier="merchantmilitary" sold="false" />
+      <Price storeidentifier="merchantmine" sold="false" />
+      <Price storeidentifier="merchantclown" minavailable="1" maxavailable="2">
+        <Reputation faction="clowns" min="45" />
+      </Price>
+    </Price>
+    <InventoryIcon texture="%ModDir%/Weapons/autohonker.png" sourcerect="0,0,132,72" depth="0.55" origin="0.5,0.5" />
+    <Sprite texture="%ModDir%/Weapons/autohonker.png" sourcerect="0,0,132,72" depth="0.55" />
+    <Body width="50" height="20" density="20" />
+    <Holdable slots="Any,RightHand+LeftHand" controlpose="true" aimpos="50,0" handle1="-5,-20" handle2="10,-10" msg="ItemMsgPickUpSelect" />
+    <RangedWeapon reload="0.33">
+      <Sound file="Content/Items/Weapons/honk.ogg" type="OnUse" range="1000" />
+      <StatusEffect type="OnUse" target="Character" disabledeltatime="true">
+        <Affliction identifier="arak_disguisedasskinwalker" amount="1.0" />
+      </StatusEffect>
+    </RangedWeapon>
+    <aitarget soundrange="1000" fadeouttime="5" />
+  </Item>
 </Items>
