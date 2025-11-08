@@ -39,5 +39,86 @@
     ‖color:177,255,255,255‖RPM: 48 ‖end‖
     ‖color:177,177,255,255‖Accuracy: 1 ‖end‖
     ‖color:255,177,255,255‖Clown Weapon ‖end‖
-    </entitydescription.arak_clownshotgun>               
+    </entitydescription.arak_clownshotgun>
+  <entityname.arak_clownhmg>Honka-Machine-Gun</entityname.arak_clownhmg>
+  <entitydescription.arak_clownhmg>
+    ‖color:233,33,8,255‖TIER 4 ‖end‖
+    ‖color:255,255,255,255‖When the autohonker just ain't enough. ‖end‖
+    ‖color:255,255,177,255‖Ammo: 5.56 ‖end‖
+    ‖color:177,177,177,255‖Damage: +0% ‖end‖
+    ‖color:177,255,177,255‖Penetration: +10% ‖end‖
+    ‖color:177,255,255,255‖RPM: 667 ‖end‖
+    ‖color:177,177,255,255‖Accuracy: 6 ‖end‖
+    ‖color:255,177,255,255‖Cannot Feed Stick Magazines ‖end‖
+    ‖color:255,177,255,255‖Firerate Increases Overtime ‖end‖
+    ‖color:255,177,255,255‖Clown Weapon ‖end‖
+    </entitydescription.arak_clownhmg>
+  <entityname.arak_giggledevil>Giggle Devil</entityname.arak_giggledevil>
+  <entitydescription.arak_giggledevil>
+    ‖color:244,222,8,255‖TIER 3 ‖end‖
+    ‖color:255,255,255,255‖A quad-barreled low-caliber rifle most commonly used for popping balloons. ‖end‖
+    ‖color:255,255,177,255‖Ammo: .38‖end‖
+    ‖color:177,255,177,255‖Damage: +15% ‖end‖
+    ‖color:177,255,177,255‖Penetration: +15% ‖end‖
+    ‖color:177,255,255,255‖RPM: 109 ‖end‖
+    ‖color:177,177,255,255‖Accuracy: 3 ‖end‖
+    ‖color:255,177,255,255‖4 Round Burst ‖end‖
+    ‖color:255,177,255,255‖Clown Weapon ‖end‖
+    </entitydescription.arak_giggledevil>
+  <entityname.arak_clownsemiautorifle>Rednose Rifle</entityname.arak_clownsemiautorifle>
+  <entitydescription.arak_clownsemiautorifle>
+    ‖color:8,188,64,255‖TIER 2 ‖end‖
+    ‖color:255,255,255,255‖A semi-automatic rifle with an energy drink can filled with confetti attached to the muzzle. ‖end‖
+    ‖color:255,255,177,255‖Ammo: 6.8‖end‖
+    ‖color:177,177,177,255‖Damage: +0% ‖end‖
+    ‖color:177,177,177,255‖Penetration: +0% ‖end‖
+    ‖color:177,255,255,255‖RPM: 95 ‖end‖
+    ‖color:177,177,255,255‖Accuracy: 6 ‖end‖
+    ‖color:255,177,255,255‖Clown Weapon ‖end‖
+    </entitydescription.arak_clownsemiautorifle>
+<entityname.arak_clownhandcannonround>.61-Cal Clown Bullet</entityname.arak_clownhandcannonround>
+<entitydescription.arak_clownhandcannonround>WIP</entitydescription.arak_clownhandcannonround>
+  <entityname.arak_revolverroundrubber>.38-Cal Rubber Round</entityname.arak_revolverroundrubber>
+  <entitydescription.arak_revolverroundrubber>
+    ‖color:255,255,255,255‖A Clown-approved, non-lethal option.‖end‖
+    ‖color:255,177,177,255‖Damage: 12 Blunt, 0.9 Stun‖end‖
+    ‖color:177,255,177,255‖Penetration: 50%‖end‖
+    ‖color:177,177,255,255‖Spread: 0‖end‖
+    </entitydescription.arak_revolverroundrubber>
+  <skinwalker.info>
+    Notes on the Skinwalker Influenza
+    
+    Symptoms:
+        low blood pressure
+        highly congealed blood, wounds coagulate quickly
+        prone to fits of aggression
+        sense of identity fading
+        skin becomes rubber-like
+        lapses in memory
+        poor balance
+
+    - The strain of flu in question is likely a variant of a common influenza brought to Europa by us.
+
+    - It probably spread to a native Europan lifeform like a crawler or a spineling and mutated. The current strain makes people insane, because of course it does.
+
+    - The virus can be cured with common antibiotics, though it is a tough bugger to kill. More advanced antidotes have been made, but they are expensive.
+
+    - The strain spreads through saliva or blood alike, and because the infected seem to be aggressive towards most adult humans, the disease can spread easily.
+
+    - Because of the lowered pain reception of the infected and their almost gel-like blood, they are somewhat hard to kill.
+
+    - The skinwalkers kept in captivity are quite docile under low-light conditions.
+
+    - While the subjects of the infection are lacking in higher cognitive functions, the fucking clowns have somehow pacified some of them.
+
+    (addendum 1) reminder to ask for funds to hire some clowns for us to study how they've honked the blueskins into being passive
+    (addendum 2) remember to rewrite this report before sending it to the higher-ups
+
+    - After incident I-025 (see Harry R's report), cut skinwalker limbs are to be stored far away from live subjects.
+
+    (addendum 3) any reports of these limbs reattaching into the main body are to be redacted
+    (addendum 4) any reports of severed limbs attaching into other infected subjects are also to be redacted
+
+    And would somebody already invent a proper, scientific name for it already? Please and thank you. - Harry
+</skinwalker.info>                                     
 </infotexts>    

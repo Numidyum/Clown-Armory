@@ -2,4 +2,5 @@
 <contentpackage name="Clown Armory" modversion="1" corepackage="False" >
   <Item file="%ModDir%/Items.xml" />
   <Afflictions file="%ModDir%/afflictions.xml" />
+  <Text file="%ModDir%/English.xml"/>
 </contentpackage>
